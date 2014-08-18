@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
   $('#accordion').hide().toggle(700);
 
   // ACCORDION
@@ -17,35 +16,21 @@ $(document).ready(function(){
     checkElement.slideDown('normal');
   }
 
-
 });
-
-
 
 // CALCULATE
 var total = 0,
     defaultValue = 0.0;
-    // input = '#accordion input[type="text"]';
 
 function getTotal() {
     $("#accordion").submit(function(event) {
 
-// can i put all of the ids into an array and then iterate over the array?
-
       // AMOUNT 1
       var amount1 = parseFloat($('#amount1').val());
-
-      // IF NOTHING IS THERE, SET VALUE TO 0
       if ($("#amount1").val().length == 0) {
         amount1 = defaultValue;
-        // console.log($(input).val());
-        // console.log(amount);
-        // console.log("working");
-
-      // IF SOMETHING OTHER THAN NUMBER, ERROR
       } else if ((amount1 != parseFloat(amount1)) && (amount1 != defaultValue)) {
         amount1 = defaultValue;
-      // OTHERWISE, ADD AMOUNT TO VALUE
       } else {
           total += amount1;
       }
@@ -190,21 +175,19 @@ function getTotal() {
           total += other;
       }
 
-    event.preventDefault();
-    $("#total").text("The Damage: $"+(total.toFixed(2)));
-})
+      event.preventDefault();
+      $("#total").text("The Damage: $"+(total.toFixed(2)));
+
+    })
   };
 
   getTotal();
 
-
-    $("#reset").click(function(event) {
-      total = 0;
-      $("#total").text("The Damage: $"+(total));
-    event.preventDefault();
-    });
-
- 
+  $("#reset").click(function(event) {
+    total = 0;
+    $("#total").text("The Damage: $"+(total));
+  event.preventDefault();
+  });
 
 });
 

@@ -1,71 +1,65 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel='stylesheet' href="style.css" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="calculator.js" type="text/javascript"></script>
+  <link rel='stylesheet' href="style.css" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="calculator.js" type="text/javascript"></script>
 </head>
 <body>
-<center>
-<div class="body">
-<h1>Travel Budget Calculator</h1>
-<form id='accordion'>
-<ul>
-
-   <li><a href='#'><span>Travel Expenses</span></a>
+  <center>
+  <div class="body">
+    <h1>Travel Calculator</h1>
+    <form id='accordion'>
       <ul>
-       <li>
 
-        <a>Plane/Train/Bus Tickets</a>$<input type="text" id="amount1" name="amount" placeholder="0"></li>
-       <li><a>Checked Baggage Fees</a>$<input type="text" id="amount2" name="amount" placeholder="0">
-       </li>
-       <li><a href='#'><span>Parking at Airport/Station</span></a>$<input type="text" id="amount3" name="amount" placeholder="0"></li>
-       <li><a href='#'><span>Gas & Tolls</span></a>$<input type="text" id="amount4" name="amount" placeholder="0"></li>
-       <li><a href='#'><span>Taxi/Shuttle to Airport/Station</span></a>$<input type="text" id="amount5" name="amount" placeholder="0"></li>
-      </ul>
-    </li>
+       <li><a href='#'><span>Travel Expenses</span></a>
+          <ul>
+           <li>
+            <a>Plane/Train/Bus Tickets</a>$<input type="text" id="amount1" name="amount" placeholder="0"></li>
+           <li><a>Checked Baggage Fees</a>$<input type="text" id="amount2" name="amount" placeholder="0">
+           </li>
+           <li><a href='#'><span>Parking at Airport/Station</span></a>$<input type="text" id="amount3" name="amount" placeholder="0"></li>
+           <li><a href='#'><span>Gas & Tolls</span></a>$<input type="text" id="amount4" name="amount" placeholder="0"></li>
+           <li><a href='#'><span>Taxi/Shuttle to Airport/Station</span></a>$<input type="text" id="amount5" name="amount" placeholder="0"></li>
+          </ul>
+        </li>
 
-   <li><a href='#'><span>Accomodation</span></a>
-      <ul>
-         <li><a href='#'><span>Hotel (Price x Number of Nights)</span></a>$<input type="text" id="hotel-price" name="amount" placeholder="0 (price per night)">x<input type="text" id="hotel-nights" name="amount" placeholder="0 (number of nights)"></li>
-         <li><a href='#'><span>Hotel Services (Spa, Minibar, Tips, etc.)</span></a>$<input type="text" id="hotel-services" name="amount" placeholder="0"></li>
-      </ul>
-   </li>
+        <li><a href='#'><span>Accomodation</span></a>
+          <ul>
+            <li><a href='#'><span>Hotel (Price x Number of Nights)</span></a>$<input type="text" id="hotel-price" name="amount" placeholder="0 (price per night)">x<input type="text" id="hotel-nights" name="amount" placeholder="0 (number of nights)"></li>
+            <li><a href='#'><span>Hotel Services (Spa, Minibar, Tips, etc.)</span></a>$<input type="text" id="hotel-services" name="amount" placeholder="0"></li>
+            </ul>
+          </li>
 
-   <li><a href='#'><span>Food & Drink</span></a>
-      <ul>
-         <li><a href='#'><span>Food (Amount per Day x Number of Days)</span></a>$<input type="text" id="food-daily" name="amount" placeholder="0 (amount per day)">x<input type="text" id="food-days" name="amount" placeholder="0 (number of days)"></li>
-         <li><a href='#'><span>Nightlife (Amount per Day x Number of Days)</span></a>$<input type="text" id="nightlife-price" name="amount" placeholder="0 (amount per day)">x<input type="text" id="nightlife-days" name="amount" placeholder="0 (number of days)"></li>
-      </ul>
-   </li>
+          <li><a href='#'><span>Food & Drink</span></a>
+            <ul>
+              <li><a href='#'><span>Food (Amount per Day x Number of Days)</span></a>$<input type="text" id="food-daily" name="amount" placeholder="0 (amount per day)">x<input type="text" id="food-days" name="amount" placeholder="0 (number of days)"></li>
+              <li><a href='#'><span>Nightlife (Amount per Day x Number of Days)</span></a>$<input type="text" id="nightlife-price" name="amount" placeholder="0 (amount per day)">x<input type="text" id="nightlife-days" name="amount" placeholder="0 (number of days)"></li>
+            </ul>
+          </li>
 
-   <li><a href='#'><span>Entertainment</span></a>
-   <ul>
-         <li><a href='#'><span>Attractions (Entry Fees, Transport, Tours)</span></a>$<input type="text" id="attractions" name="amount" placeholder="0"></li>
-         <li><a href='#'><span>Shopping & Souvenirs</span></a>$<input type="text" id="shopping" name="amount" placeholder="0"></li>
-      </ul>
-   </li>
+          <li><a href='#'><span>Entertainment</span></a>
+            <ul>
+              <li><a href='#'><span>Attractions (Entry Fees, Transport, Tours)</span></a>$<input type="text" id="attractions" name="amount" placeholder="0"></li>
+              <li><a href='#'><span>Shopping & Souvenirs</span></a>$<input type="text" id="shopping" name="amount" placeholder="0"></li>
+            </ul>
+          </li>
 
-    <li><a href='#'><span>Logistics</span></a>
-   <ul>
-         <li><a href='#'><span>Passport and Visa Fees</span></a>$<input type="text" id="passports" name="amount" placeholder="0"></li>
-         <li><a href='#'><span>Travel Insurance</span></a>$<input type="text" id="insurance" name="amount" placeholder="0"></li>
-         <li><a href='#'><span>Luggage</span></a>$<input type="text" id="luggage" name="amount" placeholder="0"></li>
-         <li><a href='#'><span>Other</span></a>$<input type="text" id="other" name="amount" placeholder="0"></li>
-      </ul>
-   </li>
+          <li><a href='#'><span>Logistics</span></a>
+            <ul>
+              <li><a href='#'><span>Passport and Visa Fees</span></a>$<input type="text" id="passports" name="amount" placeholder="0"></li>
+              <li><a href='#'><span>Travel Insurance</span></a>$<input type="text" id="insurance" name="amount" placeholder="0"></li>
+              <li><a href='#'><span>Luggage</span></a>$<input type="text" id="luggage" name="amount" placeholder="0"></li>
+              <li><a href='#'><span>Other</span></a>$<input type="text" id="other" name="amount" placeholder="0"></li>
+            </ul>
+          </li>
+        </ul>
 
-</ul>
-
-<input id="submit" type="submit" value="Calculate">
-<input id="reset" type="reset" value="Start Over">
-</form>
-<h2 id="total">The Damage: $0</h2>
-
-
-
-  
-</div>
-</center>
+        <input id="submit" type="submit" value="Calculate">
+        <input id="reset" type="reset" value="Start Over">
+      </form>
+      <h2 id="total">The Damage: $0</h2>
+    </div>
+  </center>
 </body>
 </html>
